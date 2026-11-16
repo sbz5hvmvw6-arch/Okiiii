@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>沖繩 4 天 3 夜自駕行程</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6f8f9;--surface:#fff;--ink:#17283d;--mute:#5b6b7c;--line:#d9e1e7;--indigo:#1f3a5f;--sea:#1d7f8c;--hib:#b83a33;--on-ind:#fff;--warn:#fff4e5;--warnink:#7a4a00;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1822;--surface:#17222e;--ink:#e8eef4;--mute:#9db0c1;--line:#2a3a4a;--indigo:#8db4e6;--sea:#5cc2cf;--hib:#ff8a80;--on-ind:#0f1822;--warn:#2b2210;--warnink:#f1c779}}
+:root[data-theme="dark"]{--bg:#0f1822;--surface:#17222e;--ink:#e8eef4;--mute:#9db0c1;--line:#2a3a4a;--indigo:#8db4e6;--sea:#5cc2cf;--hib:#ff8a80;--on-ind:#0f1822;--warn:#2b2210;--warnink:#f1c779}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 "Noto Sans TC",system-ui,sans-serif}
+header{padding:28px 20px 18px;max-width:720px;margin:0 auto}
+h1{margin:0 0 6px;font-size:26px;line-height:1.25;color:var(--indigo)}
+.meta{color:var(--mute);font-size:14px;margin:0}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:10}
+.tabs{display:flex;gap:6px;max-width:720px;margin:0 auto;padding:10px 16px;overflow-x:auto}
+.tabs button{flex:1 0 auto;min-width:76px;border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:8px 12px;border-radius:8px;font:inherit;font-size:14px;cursor:pointer;line-height:1.3}
+.tabs button small{display:block;color:var(--mute);font-size:12px}
+.tabs button[aria-selected=true]{background:var(--indigo);color:var(--on-ind);border-color:var(--indigo)}
+.tabs button[aria-selected=true] small{color:inherit;opacity:.85}
+button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid var(--sea);outline-offset:2px}
+main{max-width:720px;margin:0 auto;padding:8px 20px 56px}
+h2{font-size:21px;margin:20px 0 4px;color:var(--indigo)}
+h3{font-size:16px;margin:28px 0 8px}
+.sub{color:var(--mute);margin:0 0 12px;font-size:14px}
+.changed{border-left:4px solid var(--hib);background:var(--surface);padding:10px 14px;border-radius:0 8px 8px 0;font-size:14px;margin:12px 0}
+ol.tl{list-style:none;margin:0;padding:0;border-left:2px solid var(--line)}
+.tl li{position:relative;padding:0 0 14px 18px}
+.tl li::before{content:"";position:absolute;left:-6px;top:9px;width:10px;height:10px;border-radius:50%;background:var(--sea)}
+.tl li.key::before{background:var(--hib)}
+.tl time{display:block;font-size:13px;color:var(--mute);font-variant-numeric:tabular-nums}
+.tl .t{font-weight:500}
+.tl .n{font-size:14px;color:var(--mute)}
+a.map{display:inline-block;margin-left:8px;font-size:13px;color:var(--sea);text-decoration:none;border:1px solid var(--line);border-radius:6px;padding:0 8px}
+a.map:hover{border-color:var(--sea)}
+.food{list-style:none;padding:0;margin:0;border:1px solid var(--line);border-radius:8px;background:var(--surface)}
+.food li{padding:9px 14px;border-bottom:1px solid var(--line);font-size:15px}
+.food li:last-child{border:0}
+.food b{color:var(--hib);font-weight:500;margin-right:6px}
+.note{background:var(--warn);color:var(--warnink);padding:12px 14px;border-radius:8px;font-size:14px;margin-top:20px}
+.chk{list-style:none;padding:0;margin:0}
+.chk li{display:flex;gap:10px;padding:8px 0;border-bottom:1px solid var(--line);font-size:15px}
+.chk input{width:20px;height:20px;margin-top:3px;flex:none;accent-color:var(--sea)}
+.chk input:checked+span{color:var(--mute);text-decoration:line-through}
+footer{max-width:720px;margin:0 auto;padding:0 20px 32px;color:var(--mute);font-size:13px}
+</style>
+</head>
+<body>
+<header>
+<h1>沖繩 4 天 3 夜自駕行程</h1>
+<p class="meta">2026/12/23（三）– 12/26（六）｜5 位大人｜全程自駕<br>住宿：Daiwa Roynet Hotel Okinawa Kenchomae（那霸泉崎）<br>去程 12/23 06:35 → 08:55 抵達那霸｜回程 12/26 20:10 起飛</p>
+</header>
+<nav><div class="tabs" role="tablist" id="tabs"></div></nav>
+<main id="view"></main>
+<footer>所有車程為規劃估計，未計節慶車流、停車與天候。各店營業時間、預約與地點請出發前核對。</footer>
+<script>
+var G="https://www.google.com/maps/search/?api=1&query=";
+var D=[
+{tab:"12/23",wd:"三",title:"Day 1｜那霸市區",sub:"首里城、壺屋、國際通",
+changed:"新增午餐首選：首里殿內（首里城附近的沖繩料理）。",
+stops:[
+["08:55–10:30","抵達那霸機場、入境、租車取車","那霸機場"],
+["11:00–12:20","首里城（門票以現場公告為準）","首里城公園"],
+["12:30–13:45","午餐：首里殿內（古民家氛圍）","首里殿内 那覇"],
+["14:15–15:10","壺屋通陶瓷街","壺屋やちむん通り"],
+["15:20–17:20","國際通購物，順路逛牧志公設市場","第一牧志公設市場"],
+["17:30–18:15","飯店入住、休息","Daiwa Roynet Hotel Okinawa Kenchomae"],
+["18:30–20:00","晚餐：阿古豬火鍋或鰻魚飯","Ocean Boo 那覇"],
+["20:00 後","自由活動、返回飯店"]],
+food:[["午餐首選","首里殿內"],["午餐備選","第一牧志公設市場"],["晚餐首選","Ocean Boo! 阿古豬涮涮鍋"],["火鍋備選","島豚石燒 燦／肉之一心"],["鰻魚備選","浪鰻"]],
+note:"首里殿內位於首里城附近；候位較久時，國際通時間可縮短。若想保留牧志市場吃午餐，首里殿內可改為晚餐備選，需先確認晚餐營業與預約。"},
+{tab:"12/24",wd:"四",title:"Day 2｜浦添購物＋美國村聖誕夜",sub:"PARCO CITY、美國村煙火",
+stops:[
+["09:00–09:30","飯店出發，前往浦添"],
+["09:30–10:00","A&W 牧港店：拍照、飲料或點心","A&W 牧港店"],
+["10:15–11:20","SAN-A PARCO CITY 購物","サンエー浦添西海岸パルコシティ"],
+["11:30–13:00","午餐：敘敘苑（PARCO CITY）","叙々苑 パルコシティ"],
+["13:00–14:15","PARCO CITY 繼續購物"],
+["14:15–14:50","開車前往北谷"],
+["14:50–15:30","WORKMAN Plus 北谷周邊分店（需核對地址與營業時間）","WORKMAN Plus 北谷"],
+["16:00–16:40","Seria 百元商店（需確認實際門市）","Seria 北谷"],
+["16:40–17:30","美國村拍照、海景、購物","美浜アメリカンビレッジ"],
+["17:30–19:00","晚餐：グルメ回転寿司市場 美浜店（Gourmet Conveyor Belt Sushi Ichiba Mihama）","グルメ回転寿司市場 美浜店"],
+["19:00–19:45","聖誕燈飾、前往海邊觀賞區"],
+["20:00","美國村煙火（依官方公告）","美浜アメリカンビレッジ"],
+["20:15–21:30","返回那霸飯店，依散場車潮彈性調整"]],
+keys:[11],
+food:[["午餐固定","敘敘苑 PARCO CITY（建議預約，核對午間套餐）"],["午餐備選","炭火燒鰻 竹田（浦添）"],["晚餐首選","グルメ回転寿司市場 美浜店（確認是否可訂位或預約取號）"],["晚餐備選","美國村其他日式料理／海鮮"]],
+note:"萬座毛為彈性備案，不建議當日硬塞。WORKMAN Plus 與 Seria 的確切分店與營業狀況，出發前務必確認。"},
+{tab:"12/25",wd:"五",title:"Day 3｜北部海景＋拉麵＋燒肉",sub:"備瀨、今歸仁、古宇利",
+stops:[
+["07:30–09:15","那霸出發，沿高速公路往北"],
+["09:15–10:15","備瀨福木林道散步、拍照","備瀬のフクギ並木"],
+["10:15–11:10","附近海岸景色，移動至本部／今歸仁"],
+["11:10–12:10","午餐：本部或名護沿線拉麵"],
+["12:25–13:25","今歸仁城跡","今帰仁城跡"],
+["14:00–14:20","古宇利大橋觀景、拍照","古宇利大橋"],
+["14:30–15:30","古宇利海洋塔","古宇利オーシャンタワー"],
+["15:40–16:20","心型岩／Tinu Beach（注意沙地與階梯，天黑前完成）","ハートロック 古宇利島"],
+["16:20–17:30","返回名護，預留車程"],
+["17:30–19:00","晚餐：燒肉滿味（名護）","焼肉満味 名護"],
+["19:00–21:00","返回那霸飯店"]],
+keys:[7],
+food:[["午餐首選","本部町或名護拉麵（依當天路線選擇）"],["晚餐首選","燒肉滿味（名護）"],["提早回那霸","燒肉 Lion"],["那霸備選","Kokokara／Buchi"]],
+note:"名護 Neo Park 動物園為可選備案，若加入須刪減福木林道或海洋塔。12 月北部日落約 17:30，心型岩請優先排在天黑前。"},
+{tab:"12/26",wd:"六",title:"Day 4｜早取藥＋南部＋返程",sub:"黑貓 8:00 取件、沖繩世界、奧武島、DFS",
+changed:"黑貓冷藏取件提前到 08:00（那覇西センター），下午 DFS 多出約 1 小時緩衝。",
+stops:[
+["07:45–08:00","飯店出發，前往黑貓營業所","2 Chome-24-9 Nishi, Naha, Okinawa 900-0036"],
+["08:00–08:20","領取診所寄送的猛健樂冷藏包裹，確認冷藏狀態","2 Chome-24-9 Nishi, Naha, Okinawa 900-0036"],
+["08:20–08:50","回飯店退房、行李上車"],
+["08:50–09:30","前往沖繩世界","沖縄ワールド 玉泉洞"],
+["09:30–11:30","玉泉洞／沖繩世界"],
+["11:30–11:50","前往奧武島"],
+["11:50–13:00","奧武島散步、大城天婦羅午餐","大城天ぷら店 奥武島"],
+["13:00–13:45","開車返回那霸"],
+["13:45–16:15","DFS T Galleria 購物（可彈性縮短）","DFS T Galleria 沖縄"],
+["16:15–17:15","加油、租車還車、接駁前往機場","那覇空港 レンタカー"],
+["17:15 後","抵達機場、辦理登機"],
+["20:10","搭機返回台灣"]],
+keys:[0,1],
+food:[["午餐首選","奧武島 大城天婦羅（確認營業與售完情況）"],["午餐備選","糸滿魚市場（需調整奧武島時間）"],["那霸備選","鰻魚 浪鰻"]],
+note:"優先順序：領藥 → 還車 → 機場，塞車時先縮短 DFS。猛健樂需保冷但不可凍結，請放保冷袋隨身攜帶，不要留在曝曬的車內；備好處方、購買證明、原包裝，並確認台灣入境自用藥品規定。若 8:00 營業所未開，備案是 DFS 之後再取件。"}
+];
+var CK=[
+"12/26 黑貓那覇西センター週六 8:00 是否營業（客服 0570-200-000）",
+"12/26 冷藏包裹是否設為營業所留置、追蹤號碼與證件",
+"猛健樂冷藏要求、隨身攜帶與台灣入境自用藥品文件、數量限制",
+"12/23 首里殿內營業日、午間時段、5 人訂位",
+"12/24 敘敘苑訂位；回転寿司市場 美浜店的營業時間，以及能否訂位或預約取號（聖誕夜易客滿）",
+"12/24 WORKMAN Plus、Seria 正確分店與營業時間",
+"12/24 美國村煙火是否確定 20:00 舉辦",
+"12/25 燒肉滿味營業時間與 5 人座位",
+"租車車型：5 人座位與行李空間"];
+var tabs=document.getElementById("tabs"),view=document.getElementById("view"),cur=0;
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+function load(){try{return JSON.parse(localStorage.getItem("okc")||"{}")}catch(e){return{}}}
+function save(o){try{localStorage.setItem("okc",JSON.stringify(o))}catch(e){}}
+function draw(){
+tabs.innerHTML=D.map(function(d,i){return '<button role="tab" aria-selected="'+(i==cur)+'" data-i="'+i+'">'+d.tab+'<small>週'+d.wd+'</small></button>'}).join("")+'<button role="tab" aria-selected="'+(cur==4)+'" data-i="4">清單<small>行前確認</small></button>';
+if(cur==4){var st=load();
+view.innerHTML='<h2>行前確認清單</h2><p class="sub">勾選狀態只存在這台裝置的瀏覽器。</p><ul class="chk">'+CK.map(function(c,i){return '<li><input type="checkbox" id="c'+i+'" data-k="'+i+'"'+(st[i]?" checked":"")+'><span>'+esc(c)+'</span></li>'}).join("")+'</ul>';
+return}
+var d=D[cur],keys=d.keys||[];
+view.innerHTML='<h2>'+d.title+'</h2><p class="sub">'+d.sub+'</p>'+(d.changed?'<div class="changed">更新：'+d.changed+'</div>':'')+
+'<ol class="tl">'+d.stops.map(function(s,i){return '<li'+(keys.indexOf(i)>-1?' class="key"':'')+'><time>'+s[0]+'</time><span class="t">'+esc(s[1])+'</span>'+(s[2]?'<a class="map" target="_blank" rel="noopener" href="'+G+encodeURIComponent(s[2])+'">地圖</a>':'')+'</li>'}).join("")+'</ol>'+
+'<h3>餐廳首選與備選</h3><ul class="food">'+d.food.map(function(f){return '<li><b>'+f[0]+'</b>'+esc(f[1])+'</li>'}).join("")+'</ul><div class="note">'+d.note+'</div>'}
+tabs.addEventListener("click",function(e){var b=e.target.closest("button");if(!b)return;cur=+b.dataset.i;draw();window.scrollTo(0,0);try{history.replaceState(null,"","#d"+cur)}catch(x){}});
+view.addEventListener("change",function(e){var k=e.target.dataset.k;if(k==null)return;var s=load();s[k]=e.target.checked;save(s)});
+var h=location.hash.match(/^#d(\d)$/);if(h&&+h[1]<5)cur=+h[1];
+draw();
+</script>
+</body>
+</html>
